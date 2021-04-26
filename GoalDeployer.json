@@ -1,0 +1,120 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "share_price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "ETH_price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "num_ETH_required",
+				"type": "uint256"
+			}
+		],
+		"name": "goal",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "History",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "share_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ETH_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "num_ETH_required",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "Recent_required_ETH",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "share_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ETH_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "num_ETH_required",
+				"type": "uint256"
+			}
+		],
+		"name": "Update",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
