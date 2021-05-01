@@ -46,6 +46,7 @@ pip install -r web3
 
 # **[Full Demo](https://www.youtube.com/watch?v=NoqC6PsxA_U&ab_channel=VincentG)**
 
+
 <br>
 
 ### **Step 1: Extract Prices from Yahoo Finance & Update the Required Number of ETH for Crowdsale:**
