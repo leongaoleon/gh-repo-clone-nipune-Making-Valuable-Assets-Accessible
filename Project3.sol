@@ -8,7 +8,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Detailed.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Mintable.sol";
 
-// Contract Address: 0x7d7FA8911824b2BDeD6E6C7693843Ffa9f938d23
+// Local Address: 0x60604f12E6c963B0dd7B30f474f2d3FC6ce16Eb6
 // The Contract will be called by Python to Update Struct !!!!!
 contract GoalDeployer {
     
@@ -55,7 +55,7 @@ contract GoalDeployer {
 }
 
 
-// Contract Address: 0xd5B84E58f6022f4c69bC1460588c9110af8a521e
+// Contract Address: 0x007a0B6423730CE9F611261d0B4A1E2c3d16B2b0
 contract BHCoinSaleDeployer {
     
     using SafeMath for uint;
@@ -63,7 +63,7 @@ contract BHCoinSaleDeployer {
     GoalDeployer GoalDeployerContract;
     
     // Address of GoalDeployer !!!!!
-    address internal Address = address(0x7d7FA8911824b2BDeD6E6C7693843Ffa9f938d23);
+    address internal Address = address(0x60604f12E6c963B0dd7B30f474f2d3FC6ce16Eb6);
     address payable owner = msg.sender; 
     uint public required_ETH_at_deploy; //number of ETH required
     address public token_sale_address; 
@@ -93,12 +93,9 @@ contract BHCoinSaleDeployer {
         // Pre-market trading typically occurs between 8:00 a.m. and 9:30 a.m.
         // Market Trading 09:30 a.m. to 16:00 p.m.
         // Our contract will initialize at 16:00 p.m. daily and close in two hours.
-        
-        // For testing purpose, the required ETH is scaled down by 10 times. !!!!!
-        // For testing purpose, the contract can be initiazlise at anytime and close in two minutes. !!!!!
-        
+      
         BHCoinSale BHCoin_sale = new BHCoinSale(_owner, 1, token, required_ETH_at_deploy.mul(10000000000000000), required_ETH_at_deploy.mul(10000000000000000),
-        now, now + 3 minutes); /////////
+        now, now + 1 weeks); 
         token_sale_address = address(BHCoin_sale);
         
         
@@ -114,11 +111,11 @@ contract BHCoinSaleDeployer {
 }
 
 
-// Contract Address 0x688bE037cd639254C082Ca1e1bB88F9817174183
+// Contract Address 0x8d28f7FA2834b44D74AF056176a340e7f8d5Fd4d
 // Inherit the crowdsale contracts
 contract BHCoinSale is Crowdsale, MintedCrowdsale, CappedCrowdsale, TimedCrowdsale, RefundablePostDeliveryCrowdsale {
     
-    address payable _owner;
+    address _owner;
     
     constructor(
         // Fill in the constructor parameters!
@@ -137,16 +134,23 @@ contract BHCoinSale is Crowdsale, MintedCrowdsale, CappedCrowdsale, TimedCrowdsa
         TimedCrowdsale(openingTime, closingTime)
         public
     {
-        // empty constructor
+        _owner = owner;
     }
     
     // Calculating remaining goal
     function Goal_Remaining() public view returns(uint) {
         return cap().sub(weiRaised());
     }
+    
+    // For testing purpose, allowing the owner to faster forward Crowdsale window by overriding hasClosed()
+    function hasClosed() public view returns (bool) {
+        require(msg.sender == _owner, "You are NOT the owner!");
+        return true;
+    }
 }
 
 
+// Contract Address 0xc1f6714A206792d55a87315cE21f98E17076B276
 contract BHCoin is ERC20, ERC20Detailed, ERC20Mintable {
     
     using SafeMath for uint;
@@ -154,7 +158,7 @@ contract BHCoin is ERC20, ERC20Detailed, ERC20Mintable {
     GoalDeployer GoalDeployerContract;
     
     // Address of GoalDeployer !!!!!
-    address internal Address = address(0x7d7FA8911824b2BDeD6E6C7693843Ffa9f938d23);
+    address internal Address = address(0x60604f12E6c963B0dd7B30f474f2d3FC6ce16Eb6);
     address payable owner;
     uint initial_supply;
     uint start_time = now;
