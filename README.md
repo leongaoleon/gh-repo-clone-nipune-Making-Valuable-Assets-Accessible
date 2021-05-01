@@ -16,36 +16,9 @@ This project has the ability to buy and create tokens that contain traded stocks
 
 <br>
 
-## **Installation:**
-
-### Virtual environment
-​
-In the project's root run:
-​
-```bash
-conda env create -f environment.yml
-```
-​
-### Install dependencies
-​
-Next, use `pip`:
-​
-```bash
-pip install -r requirements.txt
-```
-```bash
-pip install -r yfinance
-```
-```bash
-pip install -r web3
-```
-
-<br>
-
 ## **Instructions:**
 
 # **[Full Demo](https://www.youtube.com/watch?v=NoqC6PsxA_U&ab_channel=VincentG)**
-
 
 <br>
 
@@ -55,7 +28,7 @@ a. Deploy the `Goal Deployer` contract, Copy & Paste the addresses to the Py fil
 
 b. Call Yahoo Finance API to retrive financial data and Push the data to `Goal Deployer`.
 
-
+[![YouTube](Images/1.PNG)](https://youtu.be/NoqC6PsxA_U?t=3)
 
 <br>
 
@@ -65,6 +38,7 @@ a. Input the coin name, symbol, and owner wallet address (the beneficiary of thi
 
 b. The up-to-date required number of ETH for this crowdsale is recorded and reflected in this deployer contract.
 
+[![YouTube](Images/2.PNG)](https://youtu.be/NoqC6PsxA_U?t=105)
 
 <br>
 
@@ -76,11 +50,11 @@ b. For testing purpose, the open time for this crowdsale is **3 minutes**.
 
 c. Using Account A and Account B to make the testing purchase of the BHCoin.
 
-d. After the crowdsale target is met and 3 minutes, the owner can then finalise the crowdsale, and the proceeds will be trasfered to owner's wallet address.
+d. After the crowdsale target is met and 3 minutes, the owner can then **finalise** the crowdsale, and the proceeds will be trasfered to owner's wallet address.
 
 e. Users can then check their BHCoin balance in this contract and withdraw their tokens (BHCoins).
 
-
+[![YouTube](Images/3.PNG)](https://youtu.be/NoqC6PsxA_U?t=199)
 
 <br>
 
@@ -100,6 +74,9 @@ a. Open `BHCoin` contract by using the address of BHCoin contract as well as its
 
 b. Then Users can check their BHCoin balances and add the token to their MetaMask.
 
+[![YouTube](Images/4.PNG)](https://youtu.be/NoqC6PsxA_U?t=278)
+
+[![YouTube](Images/5.PNG)](https://youtu.be/NoqC6PsxA_U?t=369)
 
 <br>
 
@@ -119,6 +96,7 @@ e. The owner can check if all tokens has been redeemed. If there is any ETH rema
 
 f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is completed.
 
+[![YouTube](Images/6.PNG)](https://youtu.be/NoqC6PsxA_U?t=444)
 
 <br>
 
@@ -146,7 +124,4 @@ f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is compl
     **In such auction contract, user can call the `Transfer` function in `BHCoin` contract to sell their coins.**
 
 2. Even though we are following ERC20 and Crowdsale Solidity Contract Standards, implementing safe-math, and using `require` statement to check various conditions, the **vulnerability** of our contract still needs to be carefully examed before launch to the main-net.
-
-
-
 
