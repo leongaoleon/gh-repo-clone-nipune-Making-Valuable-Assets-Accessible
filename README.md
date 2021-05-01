@@ -6,6 +6,7 @@ This project has the ability to buy and create tokens that contain traded stocks
 
 ![image](https://user-images.githubusercontent.com/73146288/116769198-b63cbd80-aa7d-11eb-9da8-176be7f16b6f.png)
 
+
 <br>
 
 ## **Files:**
