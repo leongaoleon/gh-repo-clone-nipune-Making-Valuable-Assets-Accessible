@@ -19,9 +19,27 @@ This project has the ability to buy and create tokens that contain traded stocks
 <br>
 
 ## **Installation:**
+
+### Virtual environment
+​
+In the project's root run:
+​
+```bash
+conda env create -f environment.yml
+```
+​
+### Install dependencies
+​
+Next, use `pip`:
+​
+```bash
+pip install -r requirements.txt
+```
+
 !pip install yfinance
 
 !pip web3
+
 
 <br>
 
