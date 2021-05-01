@@ -35,11 +35,12 @@ Next, use `pip`:
 ```bash
 pip install -r requirements.txt
 ```
-
-!pip install yfinance
-
-!pip web3
-
+```bash
+pip install -r yfinance
+```
+```bash
+pip install -r web3
+```
 
 <br>
 
