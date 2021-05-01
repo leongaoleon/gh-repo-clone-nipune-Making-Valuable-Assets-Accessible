@@ -109,10 +109,14 @@ f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is compl
 
 2. Due to the similar reason above. To commincate and extract information of one smart contract to another, we have to call the mapping to retrive any information stored in the `struct' of the other contract.
 
+![MAPPING.PNG](Images/MAPPING.PNG)
+
 <BR>
 
 3. Smart contract  only accepts integer, and ignare any digits after the decimal. We have to scale up the excahnge rate by x100, and scale down at the end. (ie. the rate of the token to 100 wei rather to 1 wei.) 
 
+![SCALE1.PNG](Images/SCALE1.PNG)
+![SCALE2.PNG](Images/SCALE2.PNG)
 
 <br>
 
