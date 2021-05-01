@@ -2,7 +2,8 @@
 
 ## **Background & Introduction:**
 
-BHCoin is a ERC20 token.
+This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Alpaca API pulled the share price information from yahoo finance. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled. 
+
 
 
 
