@@ -2,7 +2,16 @@
 
 ## **Background & Introduction:**
 
-This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Yahoo Finance pulled the share price information to the Alpaca API. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled.
+The purpose of this project is tokenizing the "expensive" stock such as BRK.A into ERC20 Tokens (BHCoin) and allow the public to purchase a fraction
+of BRK.A share.
+
+The Yahoo Finance API is called to extract price infomation (BRK.A and ETH), and then push the updated prices to the smart contracts. 
+Participants will purchase the BHCoin according to this updated exchange rate.
+
+When the Crowdsale is finalized, owner can use the proceeds to place trade of BRK.A via Alpaca API. After one-year lock-up period, participants can
+redeem their BHCoin token back to ETH at a updated exchange rate.
+
+<br>
 
 ![image](https://user-images.githubusercontent.com/73146288/116769198-b63cbd80-aa7d-11eb-9da8-176be7f16b6f.png)
 
@@ -68,7 +77,13 @@ e. Users can then check their BHCoin balance in this contract and withdraw their
 
 ### **Step 4-a: For Owner: Using the Crowdsale Proceeds to Purchase BRK Stock via Alpaca:**
 
-a. Use the code in Py file to call our `BHCoinCrowdsale` contract, retrive and check the status 1) is the crowdsale finalised 2) how much ETH is rasied.
+a. Use the code in Py file to call our `BHCoinCrowdsale` contract, retrive and check the status:
+
+1) is the crowdsale finalised 
+
+2) how much ETH is rasied.
+
+<br>
 
 ![alpaca.PNG](Images/alpaca.PNG)
 
@@ -150,3 +165,5 @@ The interface can be loaded using **Python** or **Node.js** .
    **In such auction contract, user can call the `Transfer` function in `BHCoin` contract to sell their coins.**
 
 2. Even though we are following ERC20 and Crowdsale Solidity Contract Standards, implementing safe-math, and using `require` statement to check various conditions, the **vulnerability** of our contract still needs to be carefully examed before launch to the main-net.
+
+
