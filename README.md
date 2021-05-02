@@ -87,6 +87,8 @@ a. Use the code in Py file to call our `BHCoinCrowdsale` contract, retrive and c
 
 ![alpaca.PNG](Images/alpaca.PNG)
 
+![alpaca_trade.PNG](Images/alpaca_trade.PNG)
+
 <br>
 
 ### **Step 4-b: For Users: Add the BHCoin to Wallet:**
