@@ -2,7 +2,7 @@
 
 ## **Background & Introduction:**
 
-This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Alpaca API pulled the share price information from yahoo finance. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled.
+This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Yahoo Finance pulled the share price information to the Alpaca API. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled.
 
 ![image](https://user-images.githubusercontent.com/73146288/116769198-b63cbd80-aa7d-11eb-9da8-176be7f16b6f.png)
 
