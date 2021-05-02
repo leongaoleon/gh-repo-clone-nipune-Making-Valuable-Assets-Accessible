@@ -2,18 +2,18 @@
 
 ## **Background & Introduction:**
 
-This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Alpaca API pulled the share price information from yahoo finance. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled. 
+This project has the ability to buy and create tokens that contain traded stocks on the NYSE. Crypto users can than purchase these stocks on the crypto currency market. The Alpaca API pulled the share price information from yahoo finance. Then a solicity contract tokenizes the stocks so they are in one contract. BHCoin is a ERC20 token that the contract created. Finally Web3 refreshes the contract hourly to check the order is fulfilled.
 
 ![image](https://user-images.githubusercontent.com/73146288/116769198-b63cbd80-aa7d-11eb-9da8-176be7f16b6f.png)
-
 
 <br>
 
 ## **Files:**
-* [Project3.sol](Project3.sol) 
-* [Project_3.ipynb](Project_3.ipynb) 
-* [GoalDeployer.json](GoalDeployer.json) 
-* [BHCoinSale.json](BHCoinSale.json) 
+
+- [Project3.sol](Project3.sol)
+- [Project_3.ipynb](Project_3.ipynb)
+- [GoalDeployer.json](GoalDeployer.json)
+- [BHCoinSale.json](BHCoinSale.json)
 
 <br>
 
@@ -61,8 +61,7 @@ e. Users can then check their BHCoin balance in this contract and withdraw their
 
 ### **Step 4-a: For Owner: Using the Crowdsale Proceeds to Purchase BRK Stock via Alpaca:**
 
-a. Use the code in Py file to call our `BHCoinCrowdsale` contract,  retrive and check the status 1) is the crowdsale finalised 2) how much ETH is rasied.
-
+a. Use the code in Py file to call our `BHCoinCrowdsale` contract, retrive and check the status 1) is the crowdsale finalised 2) how much ETH is rasied.
 
 <br>
 <br>
@@ -85,7 +84,7 @@ b. Then Users can check their BHCoin balances and add the token to their MetaMas
 
 a. Assuming **one year** has past. Owner will firstly use the API of Yahoo Finance to retrive the BRK & ETH Prices, and update the `Goal Deployer` (same as step one).
 
-   `For the testing purpose, we will assume the prices of BRK and ETH prices on 2022/5/1`. 
+`For the testing purpose, we will assume the prices of BRK and ETH prices on 2022/5/1`.
 
 b. Then the required number of ETH is calculated and updated, so that owner will deposit back these amounts of ETH back to the `BHCoin` contract for user to redeem.
 
@@ -101,6 +100,26 @@ f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is compl
 
 <br>
 
+### **Step 6: FrontEnd Setup:**
+
+The Front-End interface is a browser based application built on HTML. Users would be able to purchase tokens for the BHC shares using the inteface.
+The interface can be loaded using **Python** or **Node.js** .
+
+**Python Setup**
+
+1. Go to /Project-3/frontend folder using GitBash or Terminal
+2. Type **python -m http.server 8000 to load the server**
+3. In your browser type http://localhost:8000/
+
+**Node.js Setup**
+
+1. Install node.js from the following location - [node.js](https://nodejs.org/en/download/)
+2. Use GitBash or Terminal to go to /Project-3/frontend
+3. type **node server.js**
+4. In your browser type http://localhost:8080/
+
+<br>
+
 ## **Difficulties Encountered:**
 
 1. Since the smart contract is runing on `Ethereum Virtual Machine (EVM)`, we have to deploy the `Goal Deplyer` contract first to allow the interaction with Python commands, that enables Python to push new information to the blockchain.
@@ -111,7 +130,7 @@ f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is compl
 
 <BR>
 
-3. Smart contract  only accepts integer, and ignare any digits after the decimal. We have to scale up the excahnge rate by x100, and scale down at the end. (ie. the rate of the token to 100 wei rather to 1 wei.) 
+3. Smart contract only accepts integer, and ignare any digits after the decimal. We have to scale up the excahnge rate by x100, and scale down at the end. (ie. the rate of the token to 100 wei rather to 1 wei.)
 
 ![SCALE1.PNG](Images/SCALE1.PNG)
 ![SCALE2.PNG](Images/SCALE2.PNG)
@@ -122,7 +141,6 @@ f. Then check the ETH balance. If it is zero, the whole crowdsale cycle is compl
 
 1. During this one-year lock-up period, although users cannot redeem their BHCoin, they could write their own auction contract to sell their tokens.
 
-    **In such auction contract, user can call the `Transfer` function in `BHCoin` contract to sell their coins.**
+   **In such auction contract, user can call the `Transfer` function in `BHCoin` contract to sell their coins.**
 
 2. Even though we are following ERC20 and Crowdsale Solidity Contract Standards, implementing safe-math, and using `require` statement to check various conditions, the **vulnerability** of our contract still needs to be carefully examed before launch to the main-net.
-
