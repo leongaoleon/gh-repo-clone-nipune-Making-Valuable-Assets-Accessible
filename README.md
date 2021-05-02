@@ -17,6 +17,13 @@ This project has the ability to buy and create tokens that contain traded stocks
 
 <br>
 
+## **Addtional Installation:**
+
+1. !pip install yfinance
+2. !pip install alpaca_trade_api
+
+<br>
+
 ## **Instructions:**
 
 # **[Full Demo](https://www.youtube.com/watch?v=NoqC6PsxA_U&ab_channel=VincentG)**
@@ -63,8 +70,7 @@ e. Users can then check their BHCoin balance in this contract and withdraw their
 
 a. Use the code in Py file to call our `BHCoinCrowdsale` contract, retrive and check the status 1) is the crowdsale finalised 2) how much ETH is rasied.
 
-<br>
-<br>
+![alpaca.PNG](Images/alpaca.PNG)
 
 <br>
 
