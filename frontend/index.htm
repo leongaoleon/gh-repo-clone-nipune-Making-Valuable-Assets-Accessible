@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    </head>
+    <style>
+      .container {position:relative; background-color: #FD9C0D; max-width: 800px; padding:1em;}
+      .content-header{height: 250px;padding-left:4em;padding-top:1em;}
+      .itcker{}
+      .blue {color: #0d6efd;}
+      .logo {position:absolute; top:1em; right:0;}
+      .logo img{max-height: 200px;}
+      </style>
+
+    <body>
+        <div class="container">
+          <div class=content-header>
+            <div class="mb-3 ticker">
+              <div><strong> Price:</strong><span class="blue"> $400 000</span>  per 1 share of <span class="blue">BMT</span></div>
+              <div><strong> Numbers of Wallets:</strong> 10</div>
+              <div><strong> Tokens:</strong><span class="blue">  4000</span></div>
+              <div><strong> Wallet:</strong><span class="blue"> 400</span> tokens per wallet</div> 
+              <div><span class="blue">$1000</span> per token</div>
+            </div>
+            <div class="logo"><img
+              src="bhc_logo.gif"
+              alt="Grapefruit slice atop a pile of other slices">
+            </div>            
+          </div>
+          <div class="content-body">
+            <div class="mb-3 text-center">
+              <p>
+                <progress id="progressBar" value="0" max="100" style="width:500px;height:50px;"></progress>
+                <span id="status"></span>
+                <h1 id="finalMessage"></h1>           
+              </p>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="dapp-name" placeholder="Darren Forde">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="dapp-email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label id="dapp-address-key" ></label>
+              <select class="form-select" aria-label="Default select example" id="id_address">
+                <option selected>0x131F0359d3a9958521491b2407A4a8fdF97bB983</option>
+                <option value="1">0x89DE5D38BB2F96b79470Bb2118CeB7A2CBaB7a73</option>
+                <option value="2">0xb995268df51B6f25669883CDA39973329E773629</option>
+                <option value="3">0xBE2a49ee7246FD1787e7bdFB3CE9685A9Eca25aF</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <button type="button" class="btn btn-primary" onclick='start(token)'>Buy Token</button>
+            </div>            
+          </div>
+            <script>    
+            var token=0;
+
+            function start(al) {
+              var bar = document.getElementById('progressBar');
+              var status = document.getElementById('status');
+              status.innerHTML = al + "%";
+              bar.value = al;
+              al++;
+              var sim = setTimeout("start(" + al + ")", 1);
+              if (al == 20) {
+                status.innerHTML = "20%";
+                bar.value = 20;
+                clearTimeout(sim);
+                var finalMessage = document.getElementById('finalMessage');
+                finalMessage.innerHTML = "TOKEN PURCHASED";
+                token=20
+              }else if(al == 40){
+                status.innerHTML = "40%";
+                bar.value = 40;
+                clearTimeout(sim);
+                var finalMessage = document.getElementById('finalMessage');
+                finalMessage.innerHTML = "TOKEN PURCHASED";
+                token=40
+              }else if(al == 60){
+                status.innerHTML = "60%";
+                bar.value = 60;
+                clearTimeout(sim);
+                var finalMessage = document.getElementById('finalMessage');
+                finalMessage.innerHTML = "TOKEN PURCHASED";
+                token=60
+              }else if(al == 80){
+                status.innerHTML = "40%";
+                bar.value = 80;
+                clearTimeout(sim);
+                var finalMessage = document.getElementById('finalMessage');
+                finalMessage.innerHTML = "TOKEN PURCHASED";
+                token=80
+              }else if(al == 100){
+                status.innerHTML = "100%";
+                bar.value = 100;
+                clearTimeout(sim);
+                var finalMessage = document.getElementById('finalMessage');
+                finalMessage.innerHTML = "TOKEN PURCHASED";
+                token=100
+              }
+              // dApp.submitToken()
+            }
+            var amountLoaded = 0;
+            //start(amountLoaded);
+                </script>
+            <div class="container" id="getText" style="display: none;">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+          <!-- JQuery 3.4.1 slim minified -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>        
+          <!-- Web3.js -->
+            <script src="https://cdn.jsdelivr.net/npm/web3@1.2.5-rc.0/dist/web3.min.js" integrity="sha256-ZjUHyLZZWkQPbWfRjTSmGtfcTSOermVT6f/CvJW2RY4=" crossorigin="anonymous"></script>        
+          <!-- dApp JavaScript -->
+            <script src="dapp.js"></script>
+    </body>
+</html>
