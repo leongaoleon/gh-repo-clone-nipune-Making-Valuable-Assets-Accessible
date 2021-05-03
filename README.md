@@ -13,7 +13,7 @@ redeem their BHCoin token back to ETH at a updated exchange rate.
 
 <br>
 
-![image](https://user-images.githubusercontent.com/73146288/116769198-b63cbd80-aa7d-11eb-9da8-176be7f16b6f.png)
+![image](https://user-images.githubusercontent.com/73146288/116850003-2c365580-ac33-11eb-95f6-9d3d678daa7b.png)
 
 <br>
 
