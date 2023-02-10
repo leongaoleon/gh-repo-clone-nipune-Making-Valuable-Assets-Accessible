@@ -2,7 +2,7 @@
 
 ## **Background & Introduction:**
 
-The proof of concept used in this project is to tokenize an "expensive" stock such as BRK.A into ERC20 Tokens (BHCoin), and allow the public to purchase a fraction
+The proof of concept used in this project is to tokenize an "expensive" stock such as BRK.A (Berkshire Hathaway stock) into ERC20 Tokens (BHCoin), and allow the public to purchase a fraction
 of BRK.A share, similar as to what Berkshire did with BRK.B, though with the user controlling the variables.
 
 The Yahoo Finance API is called to extract price infomation (BRK.A and ETH) and then pushes the updated prices to the smart contracts. 
