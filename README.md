@@ -1,4 +1,4 @@
-# **Project 3** - Making Valuable Assets Accessible
+# **Project Name:** - Making Valuable Assets Accessible
 
 ## **Background & Introduction:**
 
